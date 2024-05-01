@@ -18,11 +18,7 @@
 # To Do:
 #  1) smb version nmap scan parse
 #  2) smb signing nmap scan parse
-#  3) Clean up writing to host file creation
-#  4) Hostname only host files
-#  4) Host file sorting?
-#  5) Nessus Parsing for csv
-#  6) ADExplorer Parsing for bloodhound
+#  3) Host file sorting?
 #
 ###########################################################
 
@@ -559,7 +555,6 @@ class convert:
 
 			#SMB Version
 			#SMB Signing
-			#Nessus
 
 # Process command-line arguments.
 if __name__ == '__main__':
