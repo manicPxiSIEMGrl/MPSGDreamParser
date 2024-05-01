@@ -13,27 +13,35 @@ Performs conversion of a valid NMAP .xml output file into into pentesting friend
 Use cases:
 - Ping Sweep Parsed into subnets file (TXT)
     
-        Input File: .XML (nmap ping scan)
-        Input Type: ping
-        Output Directory: ___
-        Output File: subnets.txt
+        MPSGDreamParser.py -inputFile nmap.xml -inputType ping -outputDirectory ~/ -outputFile subnets.txt
+        
+            Input File: .XML (nmap ping scan)
+            Input Type: ping
+            Output Directory: ___
+            Output File: subnets.txt
 - Port Scan Parsed into spreadsheet (CSV)
     
-        Input File: .XML (nmap port scan)
-        Input Type: port
-        Output Directory: ___
-        Output File: internalResults.CSV
-        Output Type: csv
+        MPSGDreamParser.py -inputFile nmap.xml -inputType port -outputDirectory ~/ -outputFile results.csv -outputType csv
+
+            Input File: .XML (nmap port scan)
+            Input Type: port
+            Output Directory: ___
+            Output File: internalResults.CSV
+            Output Type: csv
 - Port Scan Parsed into host files (TXT)
 
-        Input File: .XML (nmap port scan)
-        Input Type: port
-        Output Directory: ___
-        Output Type: txt
+        MPSGDreamParser.py -inputFile nmap.xml -inputType port -outputDirectory ~/hosts -outputType txt
+
+            Input File: .XML (nmap port scan)
+            Input Type: port
+            Output Directory: ___
+            Output Type: txt
 - Outbound Port Scan Parsed into spreadsheet (CSV)
+
+        MPSGDreamParser.py -inputFile nmap.xml -inputType outboundPort -outputDirectory ~/ -outputFile outboundPortResults.csv -outputType csv
     
-        Input File: .XML (nmap port scan against a single host)
-        Input Type: outboundPort
-        Output Directory: ___
-        Output File: outboundResults.CSV
-        Output Type: csv
+            Input File: .XML (nmap port scan against a single host)
+            Input Type: outboundPort
+            Output Directory: ___
+            Output File: outboundResults.CSV
+            Output Type: csv
