@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
-# Pentesting XML Parser - A parser to convert NMAP and Nessus output into pentest friendly files.
+# Pentesting XML Parser - A parser to convert NMAP output into pentest friendly files.
 #
 # Description:
 #   Performs conversion of a valid NMAP .xml output file
-#   or Tenable Nessus .xml report file into into
-#   pentesting friendly output files formatted depending 
-#   on the given options.
+#   into pentesting friendly output files formatted 
+#   depending on the given options.
 #
 # Author:
 #   Jessa (@manicPxiSIEMGirl)
@@ -566,10 +565,10 @@ if __name__ == '__main__':
 														"into into pentesting friendly output files formatted "
 														"depending on the given options.")
 	argParser.add_argument('-inputFile', action='store', help='input nmap file in xml format')
-	argParser.add_argument('-inputType', choices=['ping', 'port', 'outboundPort', 'smbVersion', 'smbSigning', 'nessus'], default='port', help='inputed nmap file type')
+	argParser.add_argument('-inputType', choices=['ping', 'port', 'outboundPort', 'smbVersion', 'smbSigning'], default='port', help='inputed nmap file type')
 	argParser.add_argument('-outputDirectory', action='store', help='output directory')
 	argParser.add_argument('-outputFile', action='store', help='output file')
-	argParser.add_argument('-outputType', choices=['txt', 'csv'], default='txt', help='outputed file type; csv currently not implemented')
+	argParser.add_argument('-outputType', choices=['txt', 'csv'], default='txt', help='outputed file type')
 	argParser.add_argument('-v', action=argparse.BooleanOptionalAction, help='enable verbose output for debugging')
 
 	outputLocation = ''
