@@ -15,9 +15,7 @@
 ###########################################################
 #
 # To Do:
-#  1) smb version nmap scan parse
-#  2) smb signing nmap scan parse
-#  3) Host file sorting?
+#  1) Host file sorting?
 #
 ###########################################################
 
@@ -551,10 +549,6 @@ class convert:
 			print("Failed to process outbound port scans")
 			sys.exit(1)
 
-
-			#SMB Version
-			#SMB Signing
-
 # Process command-line arguments.
 if __name__ == '__main__':
 	# Explicitly changing the stdout encoding format
@@ -565,7 +559,7 @@ if __name__ == '__main__':
 														"into into pentesting friendly output files formatted "
 														"depending on the given options.")
 	argParser.add_argument('-inputFile', action='store', help='input nmap file in xml format')
-	argParser.add_argument('-inputType', choices=['ping', 'port', 'outboundPort', 'smbVersion', 'smbSigning'], default='port', help='inputed nmap file type')
+	argParser.add_argument('-inputType', choices=['ping', 'port', 'outboundPort'], default='port', help='inputed nmap file type')
 	argParser.add_argument('-outputDirectory', action='store', help='output directory')
 	argParser.add_argument('-outputFile', action='store', help='output file')
 	argParser.add_argument('-outputType', choices=['txt', 'csv'], default='txt', help='outputed file type')
@@ -642,11 +636,6 @@ if __name__ == '__main__':
 	#Restrict usage of invalid option matchups
 	if options.inputType == 'ping' and options.outputType == 'csv':
 		print("Ping Sweep parsing does not support an output of .csv. Please use .txt")
-		sys.exit(1)
-
-	#Restrict Usage of unimplemented options
-	if options.inputType == 'smbVersion' or options.inputType == 'smbSigning' or options.inputType == 'nessus':
-		print("The specified input type has not yet been implemented. Currently implemented: port, ping, outbound")
 		sys.exit(1)
 
 	#Convert
