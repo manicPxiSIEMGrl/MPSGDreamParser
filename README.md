@@ -9,3 +9,27 @@ Performs conversion of a valid NMAP .xml output file into into pentesting friend
 - outputFile - output file
 - outputType - outputed file type ('txt', 'csv')
 - v - enable verbose output for debugging (I do not recommend this for normal usage)
+
+Use cases:
+- Ping Sweep Parsed into subnets file (TXT)
+    Input File: .XML (nmap ping scan)
+    Input Type: ping
+    Output Directory: ___
+    Output File: subnets.txt
+- Port Scan Parsed into spreadsheet (CSV)
+    Input File: .XML (nmap port scan)
+    Input Type: port
+    Output Directory: ___
+    Output File: internalResults.CSV
+    Output Type: csv
+- Port Scan Parsed into host files (TXT)
+    Input File: .XML (nmap port scan)
+    Input Type: port
+    Output Directory: ___
+    Output Type: txt
+- Outbound Port Scan Parsed into spreadsheet (CSV)
+    Input File: .XML (nmap port scan against a single host)
+    Input Type: outboundPort
+    Output Directory: ___
+    Output File: outboundResults.CSV
+    Output Type: csv
