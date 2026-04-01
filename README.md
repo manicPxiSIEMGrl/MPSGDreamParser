@@ -1,6 +1,6 @@
 # MPSGDreamParser
 
-I created this script with the intention of parsing NMAP XML files for various use cases. 
+For legal penetration testing only. Script parses NMAP XML files for various use cases. 
 
 Performs conversion of a valid NMAP .xml output file into into pentesting friendly output files formatted depending on the given options.
 - inputFile - input nmap file in xml format
